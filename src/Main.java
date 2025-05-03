@@ -20,7 +20,7 @@ public class Main {
     static String getInputWithTimeout(){
         Future<String> future = executor.submit(() -> scanner.nextLine().trim().toLowerCase().replaceAll("[^a-z]",""));
         try{
-            return future.get(5, TimeUnit.SECONDS);
+            return future.get(20, TimeUnit.SECONDS);
         }
         catch(Exception e){
             future.cancel(true);
@@ -162,7 +162,7 @@ public class Main {
         System.out.println("*******************************");
         System.out.println("WELCOME TO JAVA WORD CHAIN GAME");
         System.out.println("*******************************\n");
-        System.out.println("Note: You have 5s to enter the word!");
+        System.out.println("Note: You have 20s to enter the word!");
         System.out.println("Note: Type exit to exit the game!");
 
         do {
