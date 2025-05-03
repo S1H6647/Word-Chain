@@ -79,7 +79,7 @@ public class Main {
         System.out.print("\nDo you want to continue playing? (Enter or Y to continue): ");
         String input = scanner.nextLine().trim().toLowerCase();
         if (input.isEmpty() || input.equals("y")) {
-            System.out.println("Starting new game...");
+            System.out.println("\nStarting new game...");
             return true;
         }
         else return false;
@@ -116,6 +116,7 @@ public class Main {
                 if (player2 == null) {
                     System.out.println("\nGame Over! Time out");
                     winner(player1point, player2point);
+                    System.exit(0);
 
                 }
                 else {
